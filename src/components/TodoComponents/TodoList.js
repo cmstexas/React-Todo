@@ -1,5 +1,7 @@
 import React from 'react';
 import Todo from './Todo';
+import './Todo.css'
+
 
 const TodoList = props => {
   // const sortedList = props.groceries.sort((a, b) => a.purchased - b.purchased)
@@ -9,8 +11,8 @@ const TodoList = props => {
       {props.tasks.map(item => (
         <Todo key={item.id} item={item} toggleItem={props.toggleItem} />
       ))}
-      <button className="clear-btn" onClick={props.cleaCompleted}>
-        Clear Completed
+      <button className="clear-btn" onClick={props.clearCompleted}>
+        Clear Completed Tasks
       </button>
     </div>
   );
